@@ -1,6 +1,7 @@
 ---
 - name: Deploy Watchtower
   hosts: all
+  become: yes
   tasks:
   - community.docker.docker_container:
        name: watchtower
