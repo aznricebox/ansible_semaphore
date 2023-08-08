@@ -14,7 +14,7 @@
   - community.docker.docker_container:
        name: watchtower
        image: containrrr/watchtower
-       #schedule to run every monday @ 11pm HST
+       #schedule to run every monday @ 11pm HST/9pm UTC
        command: --schedule "00 9 ? * * MON"
        volumes:
         - /var/run/docker.sock:/var/run/docker.sock
