@@ -1,6 +1,6 @@
 ---
 - name: update LXC containers
-  hosts: containers
+  hosts: all
   tasks:
   - apt:
        name: "*"
