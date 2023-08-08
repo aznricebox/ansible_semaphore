@@ -8,7 +8,7 @@
        state: present
 # deploys watchtower container to auto update docker containers
 - name: Deploy Watchtower
-  hosts: all
+  hosts: docker
   become: yes
   tasks:
   - community.docker.docker_container:
