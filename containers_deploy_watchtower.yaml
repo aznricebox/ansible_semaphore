@@ -1,4 +1,5 @@
 ---
+# installs python3 so the community.docker.docker_container module can run
 - name: install python3-docker
   hosts: all
   tasks:
@@ -6,6 +7,7 @@
        name: python3-docker
        state: latest
        update_cache: yes
+# deploys watchtower container to auto update docker containers
 - name: Deploy Watchtower
   hosts: all
   become: yes
@@ -13,7 +15,8 @@
   - community.docker.docker_container:
        name: watchtower
        image: containrrr/watchtower
-       command: --schedule "0 0 2 * * 2"
+       #schedule to run every monday @ 11pm
+       command: --schedule "00 23 ? * MON *"
        volumes:
         - /var/run/docker.sock:/var/run/docker.sock
        restart_policy: always
