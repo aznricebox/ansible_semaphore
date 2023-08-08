@@ -1,4 +1,11 @@
 ---
+- name: install python3-docker
+  hosts: all
+  tasks:
+  - apt:
+       name: python3-docker
+       state: latest
+       update_cache: yes
 - name: Deploy Watchtower
   hosts: all
   become: yes
