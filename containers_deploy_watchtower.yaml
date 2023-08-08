@@ -18,4 +18,5 @@
        command: --schedule "00 23 ? * * MON"
        volumes:
         - /var/run/docker.sock:/var/run/docker.sock
+        - /etc/localtime:/etc/localtime:ro
        restart_policy: always
