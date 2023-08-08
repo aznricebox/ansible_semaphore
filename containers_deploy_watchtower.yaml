@@ -5,8 +5,7 @@
   tasks:
   - apt:
        name: python3-docker
-       state: latest
-       update_cache: yes
+       state: present
 # deploys watchtower container to auto update docker containers
 - name: Deploy Watchtower
   hosts: all
