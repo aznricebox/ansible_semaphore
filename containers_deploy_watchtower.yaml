@@ -17,6 +17,6 @@
        #schedule to run every monday @ 11pm
        command: --schedule "00 23 ? * * MON"
        volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
         - /etc/localtime:/etc/localtime:ro
-       restart_policy: always
+        - /var/run/docker.sock:/var/run/docker.sock
+       restart_policy: unless-stopped
