@@ -1,8 +1,0 @@
----
-- name: update LXC containers
-  hosts: all
-  tasks:
-  - apt:
-       name: pip
-       state: latest
-       update_cache: yes
