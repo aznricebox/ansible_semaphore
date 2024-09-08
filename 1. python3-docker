@@ -1,3 +1,4 @@
+---
 # installs python3 so the community.docker.docker_container module can run
 - name: install python3-docker
   hosts: docker
