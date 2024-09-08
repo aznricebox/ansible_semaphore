@@ -1,11 +1,4 @@
 ---
-# installs python3 so the community.docker.docker_container module can run
-- name: install python3-docker
-  hosts: docker
-  tasks:
-  - apt:
-       name: python3-docker
-       state: present
 # deploys watchtower container to auto update docker containers
 - name: Deploy Watchtower
   hosts: docker
