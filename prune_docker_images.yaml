@@ -1,3 +1,4 @@
 - name: Prune unused docker images
-  command: docker image prune -a
+  shell: 
+    "docker image prune -a"
     
