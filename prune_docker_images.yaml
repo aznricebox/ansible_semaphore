@@ -1,6 +1,5 @@
 - name: Prune unused docker images
   hosts: all
-  tasks:
-  - community.docker.docker_prune:
-    images: true
+  ansible.builtin.command:
+    cmd: docker image prune -a
     
