@@ -1,0 +1,6 @@
+---
+- name: Prune unused docker images
+  hosts: all
+  tasks:
+    - name: Run prune command
+      shell: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once
