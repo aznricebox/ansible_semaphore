@@ -1,0 +1,4 @@
+- name: Prune unused docker images
+  community.docker.docker_prune:
+    images: true
+    
