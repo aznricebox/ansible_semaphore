@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: Run prune command
-      shell: docker image prune -a
+      shell: docker image prune -af
