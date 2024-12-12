@@ -1,5 +1,3 @@
 - name: Prune unused docker images
-  - tasks:
-    - name: prune images
-      command: docker image prune -a
+  command: docker image prune -a
     
