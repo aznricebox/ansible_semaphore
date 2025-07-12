@@ -1,6 +1,6 @@
 ---
 - name: update ansible/semaphore
-  hosts: all
+  hosts: ansible
   tasks:
    - name: update ansible/semaphore
      ansible.builtin.shell: |
