@@ -6,3 +6,6 @@
        name: "*"
        state: latest
        update_cache: yes
+       autoclean: yes
+       autoremove: yes
+       clean: yes
