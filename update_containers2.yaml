@@ -3,7 +3,7 @@
   hosts: all
   tasks:
    - name: update LXC containers
-   ansible.builtin.shell: |
-    apt-get update &&
-    apt-get upgrade -y &&
-    apt-get clean
+     ansible.builtin.shell: |
+      apt-get update &&
+      apt-get upgrade -y &&
+      apt-get clean
