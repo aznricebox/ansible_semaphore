@@ -8,4 +8,4 @@
        update_cache: yes
        autoclean: yes
        autoremove: yes
-       clean: yes
+       autoclean: yes
