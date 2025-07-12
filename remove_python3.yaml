@@ -1,7 +1,7 @@
 ---
 # remove python3 from lxc containers not running docker
 - name: remove python3-docker
-  hosts: lxc
+  hosts: all
   tasks:
   - apt:
        name: python3-docker
