@@ -1,0 +1,13 @@
+---
+- name: update authentik
+  hosts: all
+  tasks:
+   - name: update authentik
+     ansible.builtin.shell: |
+      apt-get update &&
+      apt-get upgrade -y &&
+      apt-get clean &&
+      mv docker-compose.yml docker-compose.yml.bk &&
+      wget -O docker-compose.yml https://goauthentik.io/docker-compose.yml &&
+      docker compose pull &&
+      docker compose up -d
