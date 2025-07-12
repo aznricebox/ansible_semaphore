@@ -6,7 +6,5 @@
        name: "*"
        state: latest
        update_cache: yes
-       allow_releaseinfo_change: yes
        autoclean: yes
        autoremove: yes
-       autoclean: yes
