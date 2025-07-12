@@ -1,6 +1,6 @@
 ---
 - name: update authentik
-  hosts: all
+  hosts: authentik
   tasks:
    - name: update authentik
      ansible.builtin.shell: |
