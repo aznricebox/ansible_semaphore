@@ -1,0 +1,10 @@
+---
+- name: update linux beszel-agent
+  hosts: linux_beszel
+  tasks:
+   - name: update linux beszel-agent
+     ansible.builtin.shell: |
+      cd /opt/beszel-agent &&
+      ./run-update.sh &&
+      systemctl daemon-reload &&
+      systemctl restart beszel-agent
