@@ -11,3 +11,5 @@
       wget -O docker-compose.yml https://goauthentik.io/docker-compose.yml &&
       docker compose pull &&
       docker compose up -d
+    - name: Run prune command
+      shell: docker image prune -af
