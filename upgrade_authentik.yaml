@@ -2,11 +2,20 @@
 - name: update authentik
   hosts: authentik
   tasks:
+   - name: update lxc container
+     ansible.builtin.apt:
+       update_cache: yes
+       upgrade: yes
+     become: true
+   - name: clean apt cache
+     ansible.builtin.apt:
+       clean: yes
+     become: true
    - name: update authentik
      ansible.builtin.shell: |
-      apt-get update &&
-      apt-get upgrade -y &&
-      apt-get clean &&
+      # apt-get update &&
+      # apt-get upgrade -y &&
+      # apt-get clean &&
       mv docker-compose.yml docker-compose.yml.bk &&
       wget -O docker-compose.yml https://goauthentik.io/docker-compose.yml &&
       docker compose pull &&
