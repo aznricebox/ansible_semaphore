@@ -10,3 +10,7 @@
        update_cache: yes
        autoclean: yes
        autoremove: yes
+  
+  - name: upgrade authentik
+    ansible.builtin.shell:
+      mv docker-compose.yml docker-compose.yml.bk
