@@ -1,28 +1,12 @@
 ---
 - name: update authentik
   hosts: authentik
+  
   tasks:
-   - name: update lxc container
-     ansible.builtin.apt:
+  - name: update lxc container
+    apt:
+       name: "*"
+       state: latest
        update_cache: yes
-       upgrade: yes
-     become: true
-   - name: clean apt cache
-     ansible.builtin.apt:
        autoclean: yes
-     become: true
-   - name: update authentik
-     # ansible.builtin.shell: |
-      # apt-get update &&
-      # apt-get upgrade -y &&
-      # apt-get clean &&
-     ansible.builtin.shell: 
-      mv docker-compose.yml docker-compose.yml.bk &&
-      wget -O docker-compose.yml https://docs.goauthentik.io/docker-compose.yml &&
-      docker compose pull &&
-      docker compose up -d
-- name: Prune unused docker images
-  hosts: authentik
-  tasks:
-    - name: Run prune command
-      shell: docker image prune -af
+       autoremove: yes
