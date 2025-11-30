@@ -3,14 +3,6 @@
   hosts: authentik
   
   tasks:
-  #- name: update lxc container
-  #  apt:
-  #     name: "*"
-  #     state: latest
-  #     update_cache: yes
-  #     autoclean: yes
-  #     autoremove: yes
-  
   - name: backup current docker-compose.yml
     ansible.builtin.shell:
       mv docker-compose.yml docker-compose.yml.bk
@@ -29,3 +21,12 @@
 
   - name: prune unused docker images
     ansible.builtin.shell: docker image prune -af
+
+# upgrade breaks when updating the lxc container first
+  - name: update lxc container
+    apt:
+       name: "*"
+       state: latest
+       update_cache: yes
+       autoclean: yes
+       autoremove: yes
