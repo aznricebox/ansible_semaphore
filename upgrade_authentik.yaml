@@ -11,8 +11,8 @@
      ansible.builtin.apt:
        autoclean: yes
      become: true
-   - name: update authentik
-     ansible.builtin.shell: |
+   # - name: update authentik
+    # ansible.builtin.shell: |
       # apt-get update &&
       # apt-get upgrade -y &&
       # apt-get clean &&
