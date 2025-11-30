@@ -13,4 +13,7 @@
   
   - name: upgrade authentik
     ansible.builtin.shell:
-      mv docker-compose.yml docker-compose.yml.bk
+      mv docker-compose.yml docker-compose.yml.bk &&
+      wget -O docker-compose.yml https://docs.goauthentik.io/docker-compose.yml &&
+      docker compose pull &&
+      docker compose up -d
