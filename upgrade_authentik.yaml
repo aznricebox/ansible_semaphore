@@ -17,3 +17,6 @@
       wget -O docker-compose.yml https://docs.goauthentik.io/docker-compose.yml &&
       docker compose pull &&
       docker compose up -d
+
+  - name: prune unused docker images
+    ansible.builtin.shell: docker image prune -af
