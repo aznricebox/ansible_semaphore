@@ -11,11 +11,20 @@
        autoclean: yes
        autoremove: yes
   
-  - name: upgrade authentik
+  - name: backup current docker-compose.yml
     ansible.builtin.shell:
-      mv docker-compose.yml docker-compose.yml.bk &&
-      wget -O docker-compose.yml https://docs.goauthentik.io/docker-compose.yml &&
-      docker compose pull &&
+      mv docker-compose.yml docker-compose.yml.bk
+  
+  - name: grab newest docker-compose.yml
+    ansible.builtin.shell:
+      wget -O docker-compose.yml https://docs.goauthentik.io/docker-compose.yml
+
+  - name: docker compose pull
+    ansible.builtin.shell:
+      docker compose pull
+
+  - name: docker compose up
+    ansible.builtin.shell:
       docker compose up -d
 
   - name: prune unused docker images
