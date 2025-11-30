@@ -11,11 +11,12 @@
      ansible.builtin.apt:
        autoclean: yes
      become: true
-   # - name: update authentik
-    # ansible.builtin.shell: |
+   - name: update authentik
+     # ansible.builtin.shell: |
       # apt-get update &&
       # apt-get upgrade -y &&
       # apt-get clean &&
+     ansible.builtin.shell: 
       mv docker-compose.yml docker-compose.yml.bk &&
       wget -O docker-compose.yml https://goauthentik.io/docker-compose.yml &&
       docker compose pull &&
