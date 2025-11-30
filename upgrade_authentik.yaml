@@ -22,7 +22,7 @@
   - name: prune unused docker images
     ansible.builtin.shell: docker image prune -af
 
-# upgrade breaks when updating the lxc container
+# upgrade breaks when updating the lxc container currently: https://forum.proxmox.com/threads/docker-inside-lxc-net-ipv4-ip_unprivileged_port_start-error.175437/
   #- name: update lxc container
   #  apt:
   #     name: "*"
