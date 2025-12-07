@@ -1,0 +1,20 @@
+---
+- name: update semaphore
+  hosts: ansible
+  
+  tasks:
+  - name: update lxc container
+    apt:
+       name: "*"
+       state: latest
+       update_cache: yes
+       autoclean: yes
+       autoremove: yes
+  
+  - name: upgrade pip
+    ansible.builtin.shell:
+      python3 -m pip install --upgrade pip && python3 -m pip install --upgrade --user ansible
+  
+  - name: upgrade semaphore
+    ansible.builtin.shell:
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/semaphore.sh)"
