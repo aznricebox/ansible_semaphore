@@ -1,7 +1,7 @@
 ---
 # deploys watchtower container to auto update docker containers
 - name: Deploy Watchtower
-  hosts: test
+  hosts: docker
   become: yes
   tasks:
   - community.docker.docker_container:
