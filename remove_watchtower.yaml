@@ -7,6 +7,6 @@
     ansible.builtin.shell:
       docker stop watchtower
   
-  - name: remove portainer_agent
+  - name: remove watchtower
     ansible.builtin.shell:
       docker rm watchtower
