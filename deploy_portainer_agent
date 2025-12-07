@@ -1,8 +1,23 @@
-docker run -d \
-  -p 9001:9001 \
-  --name portainer_agent \
-  --restart=always \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /var/lib/docker/volumes:/var/lib/docker/volumes \
-  -v /:/host \
-  portainer/agent:latest
+---
+- name: deploy newest portainer_agent
+  hosts: docker
+  
+  tasks:
+  - name: stop portainer_agent
+    ansible.builtin.shell:
+      docker stop portainer_agent
+  
+  - name: remove portainer_agent
+    ansible.builtin.shell:
+      docker rm portainer_agent
+
+  - name: deploy latest portainer_agent
+    ansible.builtin.shell:
+      docker run -d \
+        -p 9001:9001 \
+        --name portainer_agent \
+        --restart=always \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /var/lib/docker/volumes:/var/lib/docker/volumes \
+        -v /:/host \
+        portainer/agent:latest
