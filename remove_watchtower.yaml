@@ -1,6 +1,6 @@
 ---
 - name: remove watchtower
-  hosts: docker
+  hosts: test
   
   tasks:
   - name: stop watchtower
