@@ -1,6 +1,6 @@
 ---
 - name: deploy newest portainer_agent
-  hosts: docker
+  hosts: test
   
   tasks:
   - name: stop portainer_agent
