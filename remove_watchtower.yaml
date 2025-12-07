@@ -1,0 +1,12 @@
+---
+- name: remove watchtower
+  hosts: docker
+  
+  tasks:
+  - name: stop watchtower
+    ansible.builtin.shell:
+      docker stop watchtower
+  
+  - name: remove portainer_agent
+    ansible.builtin.shell:
+      docker rm watchtower
