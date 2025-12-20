@@ -1,7 +1,7 @@
 ---
 - name: TEST Create and configure Proxmox LXC container
   hosts: all
-  gather_facts: false
+  # gather_facts: false
   tasks:
     - name: Create LXC container
       community.general.proxmox:
