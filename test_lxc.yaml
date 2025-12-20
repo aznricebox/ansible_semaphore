@@ -1,6 +1,6 @@
 ---
 - name: Create a started container
-  community.general.lxc_container:
+  community.general.proxmox:
     name: test-container-started
     container_log: true
     template: ubuntu
