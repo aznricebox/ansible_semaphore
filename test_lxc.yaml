@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
     - name: Create LXC container
-      community.proxmox.proxmox:
+      community.general.proxmox:
         #api_host: "{{ ansible_host }}"
         #api_user: root@pam # Use root@pam or the user with API privileges
         #api_token_id: your_token_id
