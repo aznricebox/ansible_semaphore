@@ -5,15 +5,15 @@
   tasks:
     - name: Create LXC container
       community.proxmox.proxmox:
-        api_host: "{{ ansible_host }}"
-        api_user: root@pam # Use root@pam or the user with API privileges
-        api_password: SkarmBliss!808
+        #api_host: "{{ ansible_host }}"
+        #api_user: root@pam # Use root@pam or the user with API privileges
+        #api_password: 
         #api_token_id: your_token_id
         #api_token_secret: "{{ proxmox_api_token_secret }}" # Reference secret from Semaphore keystore
         vmid: 301
         node: pve
         hostname: test
-        password:  SkarmBliss!808 # Initial password for the container's root user
+        #password:  # Initial password for the container's root user
         ostemplate: /mnt/user/Proxmox/debian-13-standard_13.1-2_amd64.tar.zst
         storage: local-lvm
         cores: 2
