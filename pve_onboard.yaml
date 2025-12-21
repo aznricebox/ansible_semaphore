@@ -1,4 +1,4 @@
-- hosts: pvenodes
+- hosts: all
   tasks:
 
   - name: install sudo package
