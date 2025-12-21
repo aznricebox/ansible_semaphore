@@ -5,7 +5,7 @@
   tasks:
     - name: Create LXC container
       community.proxmox.proxmox:
-        #api_host: "{{ ansible_host }}"
+        api_host: "{{ ansible_host }}"
         api_user: ansible@pam # Use root@pam or the user with API privileges
         #api_password: 
         api_token_id: ansible-token
