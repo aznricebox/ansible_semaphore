@@ -14,7 +14,7 @@
         node: pve
         hostname: test
         password: SkarmBliss!808 # Initial password for the container's root user
-        ostemplate: /mnt/pve/ProxmoxStorage/template/cache/debian-13-standard_13.1-2_amd64.tar.zst
+        ostemplate: /ProxmoxStorage/template/cache/debian-13-standard_13.1-2_amd64.tar.zst
         storage: local-lvm
         cores: 2
         memory: 512
