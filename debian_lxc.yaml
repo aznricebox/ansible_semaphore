@@ -1,1 +1,7 @@
-
+---
+- name: create/update debian lxc
+  hosts: all
+  tasks:
+   - name: create/update debian lxc
+     ansible.builtin.shell: |
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/debian.sh)"
