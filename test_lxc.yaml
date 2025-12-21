@@ -7,6 +7,7 @@
       community.proxmox.proxmox:
         api_host: "{{ ansible_host }}"
         api_user: root@pam # Use root@pam or the user with API privileges
+        api_password: SkarmBliss!808
         #api_token_id: your_token_id
         #api_token_secret: "{{ proxmox_api_token_secret }}" # Reference secret from Semaphore keystore
         vmid: 301
