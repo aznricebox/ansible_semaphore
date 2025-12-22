@@ -13,12 +13,12 @@
         vmid: 301
         node: pve
         hostname: test
-        password: 123456 # Initial password for the container's root user
+        password: 123 # Initial password for the container's root user
         ostemplate: 'local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
         storage: local-lvm
-        cores: 2
-        memory: 512
-        netif:
-          net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
+        #cores: 2
+        #memory: 512
+        #netif:
+         # net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
         state: present
       #delegate_to: localhost
