@@ -10,4 +10,5 @@
       ansible.builtin.shell:
         cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak &&
         echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
-        echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+        echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config &&
+        systemctl restart sshd
