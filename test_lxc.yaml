@@ -22,6 +22,14 @@
           net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
         state: present
       #delegate_to: localhost
+    - name: start container
+      community.proxmox.proxmox:
+        vmid: 301
+        api_host: 192.168.200.247
+        api_user: ansible@pam
+        api_token_id: ansible-token
+        api_token_secret: 0b529683-982e-4efa-a230-6989c2758e91
+        state: started
     - name: enter container and modify ssh
       ansible.builtin.shell:
         pct enter 301 &&
