@@ -23,6 +23,9 @@
           net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
         state: present
       #delegate_to: localhost
+    - name: Pause for 5 minutes to build app cache
+      ansible.builtin.pause:
+        seconds: 10
     - name: start container
       community.proxmox.proxmox:
         vmid: 301
