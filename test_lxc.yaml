@@ -22,3 +22,9 @@
           net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
         state: present
       #delegate_to: localhost
+    - name: enter container and modify ssh
+      ansible.builtin.shell:
+        pct enter 301 &&
+        cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak #&&
+        #echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
+        #echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config  
