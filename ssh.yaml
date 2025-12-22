@@ -7,7 +7,7 @@
       ansible.builtin.shell:
         pct enter 301
     - name: modify ssh
-        ansible.builtin.shell:
-          cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak &&
-          echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
-          echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+      ansible.builtin.shell:
+        cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak &&
+        echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
+        echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
