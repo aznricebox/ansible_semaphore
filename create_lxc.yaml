@@ -1,5 +1,5 @@
 ---
-- name: TEST Create and configure Proxmox LXC container
+- name: Create and configure Proxmox LXC container
   hosts: all
   gather_facts: false
   tasks:
