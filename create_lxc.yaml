@@ -23,7 +23,7 @@
           net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
         state: present
       #delegate_to: localhost
-    - name: Pause for 5 minutes to build app cache
+    - name: Pause for 10 seconds for lxc creation to finish
       ansible.builtin.pause:
         seconds: 10
     - name: start container
