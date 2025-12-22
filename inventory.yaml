@@ -1,0 +1,12 @@
+---
+plugin: community.proxmox.proxmox
+url: 192.168.200.247:8006 # Replace with your Proxmox host details
+user: ansible@pam # Replace with your user (e.g., root@pam)
+token_id: ansible-token # Use API tokens for security
+token_secret: 0b529683-982e-4efa-a230-6989c2758e91
+validate_certs: false # Set to true if you have valid certificates
+want_facts: true
+keyed_groups:
+  - key: proxmox_tags_parsed
+    separator: ""
+    prefix: proxmox_tags_
