@@ -14,7 +14,7 @@
         node: pve
         hostname: test
         password: zaq1ZAQ! # Initial password for the container's root user
-        ostemplate: 'local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
+        ostemplate: 'local:vztmpl/alpine-3.22-default_20250617_amd64.tar.xz'
         storage: local-lvm
         cores: 2
         memory: 512
@@ -30,9 +30,9 @@
         api_token_id: ansible-token
         api_token_secret: 0b529683-982e-4efa-a230-6989c2758e91
         state: started
-    - name: enter container and modify ssh
-      ansible.builtin.shell:
-        pct enter 301 &&
-        cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak #&&
+    #- name: enter container and modify ssh
+      #ansible.builtin.shell:
+        #pct enter 301 &&
+        #cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak #&&
         #echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
         #echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config  
