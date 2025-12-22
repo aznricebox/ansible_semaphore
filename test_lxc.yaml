@@ -14,7 +14,7 @@
         node: pve
         hostname: test
         password: zaq1ZAQ! # Initial password for the container's root user
-        ostemplate: 'local:vztmpl/alpine-3.22-default_20250617_amd64.tar.xz'
+        ostemplate: 'local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
         storage: local-lvm
         cores: 2
         memory: 512
