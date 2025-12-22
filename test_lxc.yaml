@@ -14,7 +14,7 @@
         node: pve
         hostname: test
         password: 123456 # Initial password for the container's root user
-        ostemplate: 'local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
+        lxc_template: 'local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
         storage: local-lvm
         cores: 2
         memory: 512
