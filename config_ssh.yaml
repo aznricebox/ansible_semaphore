@@ -1,5 +1,5 @@
 ---
-- name: enter container and modify ssh
+- name: modify ssh
   hosts: all
   gather_facts: false
   tasks:
