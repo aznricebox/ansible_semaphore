@@ -10,7 +10,7 @@
         #api_password: 
         api_token_id: ansible-token
         api_token_secret: 0b529683-982e-4efa-a230-6989c2758e91 # Reference secret from Semaphore keystore
-        vmid: 301
+        vmid: 301 # change to whatever vmid you want
         node: pve
         hostname: test
         password: zaq1ZAQ! # Initial password for the container's root user
