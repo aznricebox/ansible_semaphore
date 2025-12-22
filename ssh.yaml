@@ -3,9 +3,6 @@
   hosts: all
   gather_facts: false
   tasks:
-    #- name: enter container
-     # ansible.builtin.shell:
-      #  pct enter 301
     - name: modify ssh
       ansible.builtin.shell:
         cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak &&
