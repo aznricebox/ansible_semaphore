@@ -11,4 +11,4 @@
         cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak &&
         echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&
         echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config &&
-        reboot now
+        systemctl restart ssh
