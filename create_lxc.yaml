@@ -12,7 +12,7 @@
         api_token_secret: 0b529683-982e-4efa-a230-6989c2758e91 # Reference secret from Semaphore keystore
         #vmid: 301 # change to whatever vmid you want
         node: pve
-        hostname: test
+        hostname: wigglesfamily.com
         password: zaq1ZAQ! # Initial password for the container's root user
         ostemplate: 'ProxmoxStorage:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst'
         pubkey: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHO1MyeuXcr0wzaXE/2qe5PUsoqItRQOderUGZFAqzrR root@semaphore'
@@ -20,7 +20,7 @@
         cores: 2
         memory: 512
         netif:
-          net0: "name=eth0,ip=192.168.200.12/24,gw=192.168.200.1,bridge=vmbr0"
+          net0: "name=eth0,ip=dhcp,bridge=vmbr0"
         state: present
       #delegate_to: localhost
     - name: Pause for 10 seconds for lxc creation to finish
