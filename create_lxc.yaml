@@ -28,7 +28,7 @@
         seconds: 10
     - name: start container
       community.proxmox.proxmox:
-        vmid: 301
+        #vmid: 301
         api_host: 192.168.200.247
         api_user: ansible@pam
         api_token_id: ansible-token
