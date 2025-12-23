@@ -1,0 +1,17 @@
+---
+plugin: community.general.proxmox
+# URL to your Proxmox API (e.g., https://your_proxmox_host:8006/api2/json)
+url: https://pve.example.com:8006
+# Set to false if you use self-signed certificates
+validate_certs: false
+# Define how you want hosts to be named (optional, but useful)
+hostnames:
+  - name
+# Define variables to set for connecting to the host
+compose:
+  ansible_host: proxmox_ip_addresses[1] # Often the second IP is the primary interface
+  ansible_user: your_ssh_user # User for SSH connection to the VMs
+# You can use filters or keyed groups to organize VMs as needed
+keyed_groups:
+  - key: tags
+    prefix: tag_
