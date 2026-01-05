@@ -13,7 +13,7 @@
   
   - name: backup current docker-compose.yml
     ansible.builtin.shell:
-      mv docker-compose.yml docker-compose.yml.bk
+      cp docker-compose.yml docker-compose.yml.bk
   
   - name: grab newest docker-compose.yml
     ansible.builtin.shell:
