@@ -17,7 +17,7 @@
   
   - name: grab newest docker-compose.yml
     ansible.builtin.shell:
-      wget -O docker-compose.yml https://goauthentik.io/version/2025.12/docker-compose.yml
+      wget -O docker-compose.yml https://goauthentik.io/version/2026.2/lifecycle/container/compose.yml
 
   - name: docker compose pull
     ansible.builtin.shell:
